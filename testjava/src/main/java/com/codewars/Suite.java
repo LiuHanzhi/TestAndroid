@@ -2,6 +2,7 @@ package com.codewars;
 
 /**
  * http://www.codewars.com/kata/55a29405bc7d2efaff00007c/train/java
+ * success
  */
 public class Suite {
 
