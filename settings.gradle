@@ -1,1 +1,1 @@
-include ':app', ':testhandler', ':testjava', ':testanimatedvector', ':testservicestickly', ':testdrawtext'
+include ':app', ':testhandler', ':testjava', ':testanimatedvector', ':testservicestickly', ':testdrawtext', ':testlauncher'

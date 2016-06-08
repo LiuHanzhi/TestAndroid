@@ -16,6 +16,10 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         init();
+
+
+        StampView stampView = (StampView) findViewById(R.id.stampview);
+        stampView.setText("adc");
     }
 
     private void init() {
