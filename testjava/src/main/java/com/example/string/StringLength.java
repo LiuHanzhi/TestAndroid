@@ -11,5 +11,8 @@ public class StringLength {
 
         System.out.println("s.len:"+s.length());
         System.out.println("s1.len:"+s1.length());
+
+        float a = 0.01f;
+        System.out.println(String.valueOf(a));
     }
 }
