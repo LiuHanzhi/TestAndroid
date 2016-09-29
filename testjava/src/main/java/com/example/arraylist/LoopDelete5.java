@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by liuhanzhi on 16/3/2.
  */
-public class LoopDelete1 {
+public class LoopDelete5 {
 
     public static void main(String... args) {
         ArrayList<String> list = new ArrayList<String>();
@@ -14,7 +14,7 @@ public class LoopDelete1 {
         list.add("two");
         list.add("three");
         list.add("two");
-        for (int i = 0; i < list.size(); i++) {
+        for (int i = list.size() -1; i >=0; i--) {
             if (list.get(i).equals("two")) {
                 list.remove(i);
             }

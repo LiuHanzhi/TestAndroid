@@ -12,8 +12,7 @@ public class ArrayList2StringArray {
         list.add("a");
         list.add("b");
         String[] strings = list.toArray(new String[list.size()]);
-        for (String s :
-                strings) {
+        for (String s : strings) {
             System.out.println(s);
         }
     }
