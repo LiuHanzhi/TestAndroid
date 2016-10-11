@@ -7,29 +7,52 @@ public class MultThread {
     private final static Object lock = new Object();
 
     public static void inc() {
-        for (int i = 0; i <= 10000; i++) {
+        for (int i = 0; i < 100; i++) {
             try {
                 Thread.sleep(1);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            synchronized (lock){
-                count++;
+            System.out.println(Thread.currentThread().hashCode() + ": before " + count);
+            //synchronized (lock){
+            count++;
+            //}
+            System.out.println(Thread.currentThread().hashCode() + ": after " + count);
+        }
+    }
+
+    public static void desc() {
+        for (int i = 0; i < 100; i++) {
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-            System.out.println(count);
+            System.out.println(Thread.currentThread().hashCode() + ": before " + count);
+            //synchronized (lock){
+            count--;
+            //}
+            System.out.println(Thread.currentThread().hashCode() + ": after " + count);
         }
     }
 
     public static void main(String[] args) throws InterruptedException {
-        for (int i = 0; i < 2; i++) {
-            new Thread(
-                    new Runnable() {
+        for (int i = 0; i < 10; i++) {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    inc();
+                }
+            }).start();
+        }
 
-                        public void run() {
-                            inc();
-                        }
-                    }
-            ).start();
+        for (int i = 0; i < 10; i++) {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    desc();
+                }
+            }).start();
         }
     }
 }

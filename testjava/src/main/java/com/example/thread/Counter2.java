@@ -3,28 +3,33 @@ package com.example.thread;
 /**
  * Created by liuhanzhi on 16/8/11.
  */
-public class Counter {
+public class Counter2 {
 
     public int count;
 
-    public synchronized void test1() {
-        System.out.println("test1 before");
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+    public void test1() {
+        synchronized (this) {
+
+            System.out.println("test1 before");
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("test1 after");
         }
-        System.out.println("test1 after");
     }
 
-    public synchronized void test11() {
-        System.out.println("test11 before");
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+    public void test11() {
+        synchronized (this) {
+            System.out.println("test11 before");
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("test11 after");
         }
-        System.out.println("test11 after");
     }
 
     public void test2() {
@@ -45,7 +50,7 @@ public class Counter {
         System.out.println("test4");
     }
 
-    public static synchronized void test33() {
+    public synchronized static void test33() {
         System.out.println("test33 before");
         try {
             Thread.sleep(3000);
