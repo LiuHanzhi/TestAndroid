@@ -1,5 +1,6 @@
 package com.lhz.test.testfragment;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -63,6 +64,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static class MyFragment extends Fragment {
 
         public TextView textView;
+
+        @Override
+        public void onCreate(@Nullable Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            Log.e("lhz","onCreate");
+
+        }
+
+        @Override
+        public void onAttach(Context context) {
+            super.onAttach(context);
+            Log.e("lhz","onAttach");
+        }
+
+        @Override
+        public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+            super.onActivityCreated(savedInstanceState);
+            Log.e("lhz","onActivityCreated");
+        }
+
+        @Override
+        public void onStart() {
+            super.onStart();
+            Log.e("lhz","onStart");
+        }
+
+        @Override
+        public void onResume() {
+            super.onResume();
+            Log.e("lhz","onResume");
+        }
+
         @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

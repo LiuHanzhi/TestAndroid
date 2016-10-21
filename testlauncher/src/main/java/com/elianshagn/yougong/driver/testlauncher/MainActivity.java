@@ -35,6 +35,32 @@ public class MainActivity extends AppCompatActivity {
 //        }
     }
 
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.e("lhz", MainActivity.class.getSimpleName() + ": onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.e("lhz", MainActivity.class.getSimpleName() + ": onPause");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.e("lhz", MainActivity.class.getSimpleName() + ": onStart");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.e("lhz", MainActivity.class.getSimpleName() + ": onStop");
+    }
+
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

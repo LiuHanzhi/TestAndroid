@@ -19,6 +19,7 @@
         </activity>
 
         <activity android:name=".ActivityA"
+            android:theme="@style/TransparentDialog"
             android:launchMode="singleTask"/>
 
         <activity

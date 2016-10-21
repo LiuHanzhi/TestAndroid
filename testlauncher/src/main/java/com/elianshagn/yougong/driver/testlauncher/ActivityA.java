@@ -1,15 +1,15 @@
 package com.elianshagn.yougong.driver.testlauncher;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 /**
- * Created by liuhanzhi on 16/9/5.
+ * Created by liuhanzhion 16/9/5.
  */
-public class ActivityA extends AppCompatActivity {
+public class ActivityA extends Activity {
 
     public static void launch(Fragment fragment) {
         Intent intent = new Intent(fragment.getContext(), ActivityA.class);
