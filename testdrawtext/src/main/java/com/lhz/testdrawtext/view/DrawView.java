@@ -1,4 +1,4 @@
-package com.lhz.testdrawtext;
+package com.lhz.testdrawtext.view;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -11,6 +11,8 @@ import android.graphics.Path;
 import android.graphics.RectF;
 import android.graphics.Shader;
 import android.view.View;
+
+import com.lhz.testdrawtext.R;
 
 /**
  * Created by liuhanzhi on 16/3/8.

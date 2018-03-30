@@ -3,6 +3,8 @@ package com.lhz.testdrawtext;
 import android.app.Activity;
 import android.os.Bundle;
 
+import com.lhz.testdrawtext.view.CustomEditText;
+
 /**
  * Created by liuhanzhi on 16/4/22.
  */

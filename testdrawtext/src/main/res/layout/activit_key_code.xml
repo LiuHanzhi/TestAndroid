@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.lhz.testdrawtext.CustomEditText
+    <com.lhz.testdrawtext.view.CustomEditText
         android:id="@+id/custom_edit"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

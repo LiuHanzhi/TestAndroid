@@ -1,4 +1,4 @@
-package com.lhz.testdrawtext;
+package com.lhz.testdrawtext.view;
 
 import android.content.Context;
 import android.graphics.Canvas;

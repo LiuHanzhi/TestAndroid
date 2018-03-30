@@ -3,18 +3,32 @@
     package="com.lhz.testandroid">
 
     <application
+        android:name=".BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ActivityA">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ActivityB" />
+
+        <!--通过singleInstance启动一个单独的task，它独享这个task-->
+        <!-- <activity
+             android:name=".ActivityC"
+             android:launchMode="singleInstance"/>-->
+
+        <!--通过singleTask和设置taskAffinity启动一个单独的task，后续的activity都会放入这个task中-->
+        <!--<activity
+            android:name=".ActivityC"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.lhz.testandroid.activityc"/>-->
+
     </application>
 
 </manifest>

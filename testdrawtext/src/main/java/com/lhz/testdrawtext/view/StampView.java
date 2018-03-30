@@ -1,4 +1,4 @@
-package com.lhz.testdrawtext;
+package com.lhz.testdrawtext.view;
 
 import android.annotation.TargetApi;
 import android.content.Context;

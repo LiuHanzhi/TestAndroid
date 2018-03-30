@@ -2,8 +2,9 @@ package com.lhz.testdrawtext;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.RelativeLayout;
 
-import com.lhz.testdrawtext.view.RoundTagView;
+import com.lhz.testdrawtext.view.NoInvoiceTagView;
 
 public class MainActivity extends Activity {
 
@@ -11,10 +12,15 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        RelativeLayout container = (RelativeLayout) findViewById(R.id.container);
+        NoInvoiceTagView tagView = new NoInvoiceTagView(this);
+//        tagView.setText("无发票我就是没有发票");
+        tagView.setPadding(30,30,30,30);
+//        tagView.setTextSize(100);
+        container.addView(tagView);
 
-        RoundTagView roundTagView = (RoundTagView) findViewById(R.id.round_tagView);
-        roundTagView.setText("测试");
-
+//        RoundTagView roundTagView = (RoundTagView) findViewById(R.id.round_tagView);
+//        roundTagView.setText("测试");
 //        init();
 //        StampView stampView = (StampView) findViewById(R.id.stampview);
 //        stampView.setText("adc");
