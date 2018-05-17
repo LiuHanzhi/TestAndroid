@@ -4,3 +4,9 @@
 /.idea
 .DS_Store
 /build
+libs/
+src/main/aidl/
+src/main/java/com/lhz/test/testaidl/IMyAidlInterface.java
+src/main/java/com/lhz/test/testaidl/MyService.java
+src/main/java/com/lhz/test/testaidl/bean/
+src/main/res/drawable/
